@@ -8,10 +8,21 @@ import android.widget.TextView;
 
 public class Calculator extends Activity implements View.OnClickListener {
 
+    private enum OPERATOR {
+
+        PLUS, SUBSTRACT, MULTIPLY, DIVIDE, EQUAL
+    }
+
     TextView txtCalculations;
     TextView txtResults;
 
+    // Instance Variables
 
+    private String currentNumber;
+    private String stringNumberAtLeft;
+    private String stringNumberAtRight;
+    private OPERATOR currentOperator;
+    private int calculationsResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
